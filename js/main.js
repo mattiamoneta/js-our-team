@@ -42,7 +42,7 @@ const objTeamArray = [
 
 for(let i = 0; i < objTeamArray.length; i++){
     for (let objKeys in objTeamArray[i]){
-        // console.log(objTeamArray[i][objKeys]);
+        console.log(objTeamArray[i][objKeys]);
 
         const newListItem = document.createElement('li');
         newListItem.innerText = objTeamArray[i][objKeys];
