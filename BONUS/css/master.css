@@ -1,0 +1,122 @@
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --bg-primary: #f6f3ea;
+    --text-primary: #302b26;
+    --light-brown: #5e5349;
+}
+
+html{
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    background-image: url('../img/bg.png');
+}
+
+h1, h2{
+    font-family: 'Libre Baskerville', serif;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+
+/* LAYOUT */
+
+.container{
+    margin: auto;
+    max-width: 1170px;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-1{width: calc(100% / 12);}
+.col-2{width: calc((100% / 12) * 2);}
+.col-3{width: calc((100% / 12) * 3);}
+.col-4{width: calc((100% / 12) * 4);}
+.col-5{width: calc((100% / 12) * 5);}
+.col-6{width: calc(100% / 2);}
+.col-7{width: calc((100% / 12) * 7);}
+.col-8{width: calc((100% / 12) * 8);}
+.col-9{width: calc((100% / 12) * 9);}
+.col-10{width: calc((100% / 12) * 10);}
+.col-11{width: calc((100% / 12) * 11);}
+.col-12{width: 100%;}
+
+/* COLORS */
+
+.bg-primary{background-color: var(--bg-primary);}
+.bg-white{background-color: white;}
+
+
+.card{
+    border-radius: 25px;
+    padding: 50px 10px;
+    text-align: center;
+    transition: all .2s ease;
+    border: 1px solid #dbd6c8;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.10);
+    transform: scale(1.05);
+}
+
+img.card-img{
+    border-radius: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    margin-bottom: 30px;
+}
+
+.card h2{
+    padding-top: 20px;
+    color: var(--text-primary);
+}
+
+.card .caption{
+    font-size: .9rem;
+    font-style: italic;
+}
+
+.separator{
+    display: inline-block;
+    width: 100px;
+    height: 3px;
+    background-color: var(--light-brown);
+}
+
+.separator.separator-sm{
+    width: 30px;
+    height: 2px;
+    margin-bottom: 10px;
+}
+
+.p-2{padding: 2rem;}
+.pt-2{padding-top: 2rem;}
+.py-2{padding: 2rem 0rem;}
+.py-4{padding: 4rem 0rem;}
+.my-1{margin: 1rem 0rem;}
+
+.text-center{text-align: center;}
+
+@media screen and (max-width: 768px) {
+
+    .col-4{
+        width: 100%;
+    }
+
+}
