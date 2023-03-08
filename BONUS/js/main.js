@@ -45,7 +45,7 @@ for(let i = 0; i < objTeamArray.length; i++){
 
         domCardStack.innerHTML += `<div class="col-4 p-2">
                                         <div class="card bg-white">
-                                            <img src="./img/${objTeamArray[i].pict}" alt="${objTeamArray[i].nome}" class="card-img">
+                                            <div class="img-wrapper"><img src="./img/${objTeamArray[i].pict}" alt="${objTeamArray[i].nome}" class="card-img"></div>
                                             <h2>${objTeamArray[i].nome}</h2>
                                             <div class="separator separator-sm"></div>
                                             <div class="caption">${objTeamArray[i].role}</div>

@@ -61,11 +61,13 @@ h1{
 
 
 .card{
+    position: relative;
     border-radius: 25px;
     padding: 50px 10px;
     text-align: center;
     transition: all .2s ease;
     border: 1px solid #dbd6c8;
+    border-bottom: 4px solid var(--light-brown);
 }
 
 .card:hover{
@@ -74,17 +76,32 @@ h1{
 }
 
 img.card-img{
-    border-radius: 50%;
+    clip-path: polygon(0 11%, 100% 0, 89% 81%, 10% 100%);
     object-fit: cover;
     overflow: hidden;
-    width: 200px;
+    width: 230px;
     height: 200px;
     margin-bottom: 30px;
 }
 
+/* Triangolo sotto immagine */
+.img-wrapper::before{
+    position: absolute;
+    content: '';
+    width: 100px;
+    height: 80px;
+    right: 40px;
+    top: 189px;
+    z-index: 999;
+    clip-path: polygon(0 46%, 71% 10%, 83% 68%);
+    background-color: var(--light-brown);
+}
+
+
 .card h2{
     padding-top: 20px;
     color: var(--text-primary);
+    font-size: 1.8rem;
 }
 
 .card .caption{
@@ -102,7 +119,8 @@ img.card-img{
 .separator.separator-sm{
     width: 30px;
     height: 2px;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 .p-2{padding: 2rem;}
